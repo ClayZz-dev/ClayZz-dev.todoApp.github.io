@@ -1,0 +1,309 @@
+.active {
+  border-bottom: 2px solid #EA80FC;
+  font-weight: 500;
+  color: #e9e9e9;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.dragged {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-transform: scale(1.02, 1.02);
+          transform: scale(1.02, 1.02);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  overflow-x: hidden;
+  background-color: #141414;
+  color: #c0c0c0;
+}
+
+nav {
+  width: 100%;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selection {
+  display: none;
+}
+
+.filter-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  min-height: 10vh;
+}
+
+.filter-cont .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  width: 10vw;
+  height: 10vh;
+  cursor: pointer;
+}
+
+.header-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+.header-container .header h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.header-container .header h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6e7074;
+}
+
+.inputbar-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+.inputbar-container .input-bar {
+  width: 25vw;
+  height: 6vh;
+  padding: 5px;
+  border: 1px solid #202124;
+  font-size: 1rem;
+  background-color: #202020;
+  color: #c0c0c0;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputbar-container .add-btn {
+  width: 3rem;
+  height: 6vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #202124;
+  background-color: #B64FC8;
+  border: 1px solid #202124;
+}
+
+.todo-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.todo-container .todo-box {
+  width: 32vw;
+  height: 80vh;
+  margin: 3em;
+  padding: 1.2em;
+}
+
+.todo-container .todo-box .todo-header {
+  height: 4vh;
+  margin-bottom: 1em;
+}
+
+.todo-container .todo-box .todo-header h2 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.todo-container .todo-box .todo-header h2 i {
+  margin-right: 0.4rem;
+}
+
+.todo-list .todo {
+  width: 100%;
+  min-height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #202124;
+  padding: 1em;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.todo-list .todo button {
+  margin-right: 2px;
+  background-color: #202124;
+  border: none;
+  color: #c0c0c0;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.4rem;
+}
+
+.todo-list .todo .todo-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.phone-footer {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .inputbar-container {
+    display: none;
+  }
+  .selection {
+    width: 100%;
+    height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1em;
+    padding-left: 2em;
+  }
+  .selection select {
+    color: #EA80FC;
+    background-color: #141414;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+  }
+  .todo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .todo-container .todo-box {
+    display: none;
+    min-width: 90vw;
+    margin: 0;
+  }
+  .todo-container .todo-box .todo-header {
+    display: none;
+  }
+  .todo-container .all-box {
+    display: block;
+  }
+  .phone-footer {
+    width: 100%;
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    border-top: 2px solid #EA80FC;
+  }
+  .phone-footer .add-new {
+    color: #EA80FC;
+  }
+  .drpdwn-phones {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .input-bar {
+    min-width: 65vw;
+  }
+  .todo-box {
+    display: none;
+    min-width: 75vw;
+  }
+  .all-box {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

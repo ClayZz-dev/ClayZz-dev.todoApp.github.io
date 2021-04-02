@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="app/style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <!-- header nav, contains all, important and done -->
+    <nav class="header-nav">
+        <ul class="filter-cont">
+            <li class="filter active" id="all">All</li>
+            <li class="filter" id="important">Important</li>
+            <li class="filter" id="done">Done</li>
+        </ul>
+    </nav>
+
+    <!-- date and day section -->
+    <div class="header-container">
+        <div class="header" id="date">
+            <h1>Monday</h1>
+            <h4>March 29 2021</h4>
+        </div>
+    </div>
+
+    <!-- input bar -->
+    <div class="inputbar-container">
+        <input type="text" class="input-bar">
+        <button class="add-btn">Add</button>
+    </div>
+
+    <!-- main section -->
+    <main>
+        <div class="todo-container">
+            <div class="selection">
+                <select name="dropdown" id="drpdwn-phone">
+                    <option value="All">All</option>
+                    <option value="Important">Important</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            <!-- square box for todo container -->
+            <div class="todo-box all-box">
+                <!-- top header todo -->
+                <div class="todo-header all-header">
+                    <h2><i class="fas fa-stream"></i>All</h2>
+                </div>
+                <ul class="todo-list">
+                    <!-- todo list -->
+                </ul>
+            </div>
+            <div class="todo-box important-box">
+                <div class="todo-header important-header">
+                    <h2><i class="fas fa-exclamation"></i>Important</h2>
+                </div>
+                <ul class="todo-list">
+                    <!-- todo list -->
+                </ul>
+            </div>
+            <div class="todo-box done-box">
+                <div class="todo-header done-header">
+                    <h2><i class="fas fa-check-square "></i>Done</h2>
+                </div>
+                <ul class="todo-list">
+            </ul>
+        </div>
+        </div>
+
+        <div class="phone-footer">
+            <div class="add-new">
+                <span>Add New +</span>
+            </div>
+        </div>
+    </main>
+    <script src="app/script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+$mainColorPastel : #FFB2FF;
+$mainColor : #EA80FC;
+$darkMainColor : #B64FC8;
+$darkColor : #202124;
+$dark : #141414;
+$darkgrey : #3C4042;
+$lightgrey : #c0c0c0;
+$grey : #6e7074;
+$mainFont : 'Poppins', sans-serif;
+$debug : 1px solid red;
+
+// fluid font
+// $minsize, $maxsize, $minvw, $maxvw
+@mixin fluidFont(){
+    font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+@mixin centerElement($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin fontStyle($fontSize) {
+    font-size: $fontSize;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+}
+
+@mixin backgroundImage($url){
+    background-image : $url;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// classes
+.active {
+    border-bottom: 2px solid $mainColor;
+    font-weight: 500;
+    color: rgb(233, 233, 233);
+}
+
+.checked{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.dragged{
+    transition: all 0.25s;
+    transform: scale(1.02, 1.02);
+}
