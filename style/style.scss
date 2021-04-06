@@ -175,10 +175,46 @@ nav {
     display: none;
 }
 
+// PHONES MEDIA QUEIRIES
 
 @media screen and(max-width: 600px){
     nav {
         display: none;
+    }
+
+    .header-container{
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 0 2.5em;
+
+                #date{
+                    display: flex;
+                    align-items: center;
+                    
+                h1{
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    margin-right: 0.5rem;
+                }
+            
+                span{
+                    text-align: right;
+                    font-size: 1rem;
+                    span {
+                        color: $grey;
+                        font-weight: 300;
+                        display: block;
+                    }
+                } 
+            }
+            h4{
+                font-weight: 400;
+                color: $lightgrey;
+            }
+        } 
     }
 
     .inputbar-container{
@@ -204,40 +240,62 @@ nav {
 
     .todo-container{
         @include centerElement(column);
-
+        margin-top: 1.5rem;
         .todo-box{
             display: none;
             min-width: 90vw;
             margin: 0;
             .todo-header{
-                display: none;
+                border-bottom: 1px solid $darkgrey;
+                color: $mainColor;
+
             }
+           
         }
 
         .all-box{
             display: block;
         }
+        .todo{
+            background-color: transparent;
+
+            button{
+                background-color: transparent;
+            }
+            .dots, .icon{
+                width: 3rem;
+                height: 1.5rem;
+                background-color: transparent;
+            }
+        }
     }
 
     .phone-footer{
         width: 100%;
-        height: 10vh;
+        height: 8vh;
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        position: sticky;
+        justify-content: space-between;
+        position: fixed;
         bottom: 0;
-        border-top: 2px solid $mainColor;
+        border-top: 1px solid $mainColor;
+        padding: 0 3rem;
 
-        .add-new{
+        .phone-filter-container{
+            h4{
+                font-weight: 300;
+            }
+
+            .filter-list{
+                display: none;
+            }
+        }
+
+        .add-new-container{
+            font-size: 1rem;
+            font-weight: 300;
             color: $mainColor;
         }
-    }
-
-    .drpdwn-phones{
-        border: none;
-        font-family: $mainFont;
-        flex: 1;
     }
 }
 

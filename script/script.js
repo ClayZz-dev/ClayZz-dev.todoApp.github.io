@@ -34,6 +34,10 @@ let doneIndex = 2;
 // const filterImportant = document.querySelector("#important");
 // const filterDone = document.querySelector("#done");
 
+// date generator
+function dateGenerator(){
+    
+}
 
 addBtn.addEventListener("click", () => {
     createTodo();

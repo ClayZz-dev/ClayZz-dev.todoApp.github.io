@@ -27,9 +27,12 @@
 
     <!-- date and day section -->
     <div class="header-container">
-        <div class="header" id="date">
-            <h1>Monday</h1>
-            <h4>March 29 2021</h4>
+        <div class="header">
+            <div id="date">
+                <h1>29</h1>
+                <span>MAR <span>2021</span></span>
+            </div>
+            <h4>TODAY</h4>
         </div>
     </div>
 
@@ -42,12 +45,6 @@
     <!-- main section -->
     <main>
         <div class="todo-container">
-            <div class="selection">
-                <select name="dropdown" id="drpdwn-phone">
-                    <option value="All">All</option>
-                    <option value="Important">Important</option>
-                </select>
-            </div>
             <!-- square box for todo container -->
             <div class="todo-box all-box">
                 <!-- top header todo -->
@@ -79,17 +76,27 @@
                 </ul>
             </div>
         </div>
+
         <div class="phone-footer">
-            <div class="add-new">
-                <span>Add New +</span>
+            <div class="phone-filter-container">
+                <h4 class="show-filter">All</h4>
+                <ul class="filter-list">
+                    <li class="phone-all"></li>
+                    <li class="phone-important"></li>
+                </ul>
+            </div>
+            <div class="add-new-container">
+                <div class="add-new">
+                    <span>Add New +</span>
+                </div>
             </div>
         </div>
     </main>
     <script src="script/script.js"></script>
-    
-    <template>
-        <!-- todo list -->
-        <li id="todo">
+
+    <!-- <template> -->
+    <!-- todo list -->
+    <!-- <li id="todo">
             <button><i class="far fa-square icon"></i></button>
             <div class="todo-text"></div>
             <button><i class="fas fa-ellipsis-h dots"></i></button>
@@ -98,8 +105,8 @@
                     <li id="delete"></li>
                 </ul>
             </div>
-        </li>
-    <template>
+        </li> -->
+    <!-- <template> -->
 
 </body>
 
