@@ -64,8 +64,20 @@
                 <div class="todo-header important-header">
                     <h2><i class="fas fa-exclamation"></i>Important</h2>
                 </div>
-                <ul class="todo-list">
+                <ul class="todo-list" data-list-container>
                     <!-- todo list -->
+                    <!-- <li class="todo">
+                        <button><i class="far fa-square icon"></i></button>
+                        <div class="todo-text">
+                            test
+                        </div>
+                        <button><i class="fas fa-ellipsis-h dots"></i></button>
+                        <div class="option-dots">
+                            <ul class="option-container">
+                                <li id="delete">Delete</li>
+                            </ul>
+                        </div>
+                    </li> -->
                 </ul>
             </div>
             <div class="todo-box done-box">
@@ -84,6 +96,21 @@
         </div>
     </main>
     <script src="script/script.js"></script>
+    
+    <template>
+        <!-- todo list -->
+        <li id="todo">
+            <button><i class="far fa-square icon"></i></button>
+            <div class="todo-text"></div>
+            <button><i class="fas fa-ellipsis-h dots"></i></button>
+            <div class="option-dots">
+                <ul class="option-container">
+                    <li id="delete"></li>
+                </ul>
+            </div>
+        </li>
+    <template>
+
 </body>
 
 </html>

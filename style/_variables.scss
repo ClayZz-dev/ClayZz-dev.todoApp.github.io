@@ -52,3 +52,7 @@ $debug : 1px solid red;
     transition: all 0.25s;
     transform: scale(1.02, 1.02);
 }
+
+.clicked{
+    display: block !important;
+}

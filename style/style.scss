@@ -125,6 +125,7 @@ nav {
         padding: 1em;
         cursor: pointer;
         margin-bottom: 0.5em;
+        position: relative;
         button{
             margin-right: 2px;
             background-color: $darkColor;
@@ -139,11 +140,29 @@ nav {
             flex: 1;
             flex-wrap: wrap;
         }
-
-        
     }
 }
 
+.option-dots {
+    width: 5rem;
+    padding: 0.5rem;
+    position : absolute;
+    right: 0.5rem;
+    bottom: -1.2rem;
+    box-shadow: 0 0 5px 1px rgba(20, 20, 20, 0.747);
+    transition: all 0.1s ease-in;
+    background-color: $darkColor;
+    color: $lightgrey;
+    display: none;
+    li {
+        list-style: none;
+        font-size: 0.9rem;
+    }
+
+    &:hover{
+        color: white;
+    }
+}
 
 .phone-footer{
     display: none;
