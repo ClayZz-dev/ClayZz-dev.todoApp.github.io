@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 
@@ -72,6 +76,9 @@ nav {
         background-color: #202020;
         color: $lightgrey;
         font-family: $mainFont;
+        &:focus{
+            outline: none;
+        }
     }
 
     .add-btn{
