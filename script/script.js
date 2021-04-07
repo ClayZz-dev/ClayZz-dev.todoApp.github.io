@@ -53,6 +53,7 @@ addNew.addEventListener("click", phonesAdd)
 
 addBtn.addEventListener("click", () => {
     createTodo();
+    phonesAdd();
     inputbar.value = "";
 });
 inputbar.addEventListener("keypress", e => {
