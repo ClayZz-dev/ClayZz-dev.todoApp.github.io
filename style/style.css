@@ -1,26 +1,77 @@
+.checked {
+  text-decoration: line-through;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
 
 *:focus {
-  outline: none;
+  outline: none !important;
 }
 
-.svg {
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, #a1ffff 11.3%, #06ffff 41.2%, #00d8d8 77.8%);
+.sidebar {
+  width: 20%;
+  height: 100vh;
 }
 
-.svg svg {
-  opacity: 0.5;
+.main-container {
+  border-left: 1px solid #dbdbdb;
+  width: 80%;
+  background-color: #edeff1;
 }
 
-.header {
-  top: 0;
+.header-todo h1 {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: -5px 5px 2px #595d5f5b;
 }
 
-.header-txt h1 {
-  font-family: "Pacifico", cursive;
-  text-shadow: -2px -1rem 0 #c0c0c0;
-  color: white;
+.todo-container {
+  background-color: white;
+}
+
+.inputbar-container .input-bar {
+  border: 1px solid #dbdbdb;
+}
+
+.inputbar-container .add-btn {
+  background-color: #98acf8;
+}
+
+.todo-list .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  width: 95%;
+  height: 4rem;
+  -webkit-box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
+          box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
+  margin-bottom: 0.5rem;
+}
+
+.todo-list .todo .todo-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.todo-list .todo .icon {
+  margin-right: 0.5rem;
+}
+
+.option-dots {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .sidebar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

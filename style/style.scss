@@ -1,29 +1,71 @@
 @import "variables";
 
 *{  
-
     &:focus{
-        outline: none;
+        outline: none !important;
     }
     font-family: $mainFont;
 }
 
+.sidebar{
+    width: 20%;
+    height: 100vh;
+}
 
-.svg {
-    background-image: $bgGradient;
-    svg{
-        opacity: 0.5;
+.main-container{
+    border-left: 1px solid $lightgrey;
+    width: 80%;
+    background-color: #edeff1;
+}
+
+.header-todo{
+    h1{
+        font-family: $minimalistFont;
+        text-shadow: -5px 5px 2px #595d5f5b;
     }
 }
 
-.header {
-    top: 0;
+.todo-container{
+    background-color: white;
 }
 
-.header-txt{
-    h1{
-        font-family: $headerFont;
-        text-shadow: -2px -1rem 0 $lightgrey;
-        color: white;
+.inputbar-container{
+    .input-bar{
+        border: 1px solid $lightgrey;
+    }
+    .add-btn{
+        background-color: $mainColor;
+    }
+}
+
+// todo style
+.todo-list{
+    .todo{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        width: 95%;
+        height: 4rem;
+        box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
+        margin-bottom: 0.5rem;
+
+        .todo-text{
+            flex: 1;
+        }
+
+        .icon{
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.option-dots{
+    display: none;
+}
+
+@media screen and (max-width: 780px){
+    .sidebar{
+        display: none;
     }
 }
