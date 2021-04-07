@@ -30,14 +30,26 @@ let importantIndex = 1;
 let doneIndex = 2;
 // *PHONE VARIABLES
 // selections
-// const filterAll = document.querySelector("#all");
+const addNew = document.querySelector(".add-new");
+const addNewPhoneContainer = document.querySelector(".add-new-phone");
 // const filterImportant = document.querySelector("#important");
 // const filterDone = document.querySelector("#done");
 
 // date generator
-function dateGenerator(){
-    
+function dateGenerator() {
+
 }
+
+
+// All
+
+// *event listener
+// todoListUl[allIndex].addEventListener("click", (e) => {
+//     const get = localStorage.getItem(LOCAL_STORAGE_KEY);
+// });
+
+// ?phones
+addNew.addEventListener("click", phonesAdd)
 
 addBtn.addEventListener("click", () => {
     createTodo();
@@ -46,16 +58,11 @@ addBtn.addEventListener("click", () => {
 inputbar.addEventListener("keypress", e => {
     if (e.keyCode == 13) {
         createTodo();
+        phonesAdd();
         inputbar.value = "";
     }
 })
 
-// All
-
-// *event listener
-// todoListUl[allIndex].addEventListener("click", (e) => {
-//     const get = localStorage.getItem(LOCAL_STORAGE_KEY);
-// });
 window.addEventListener("DOMContentLoaded", showingLocalStorageTodo);
 todoListUl[allIndex].addEventListener("click", checkMark);
 todoListUl[allIndex].addEventListener("click", e => {
@@ -63,16 +70,16 @@ todoListUl[allIndex].addEventListener("click", e => {
     const parent = target.parentElement;
     const selected = parent.parentElement;
 
-    if(target.classList.contains("dots")){
+    if (target.classList.contains("dots")) {
         parent.nextSibling.classList.toggle("clicked");
     }
-    else if(target.classList.contains("delete-todo")){
+    else if (target.classList.contains("delete-todo")) {
         selected.parentElement.style.display = "none";
         clearTodo(selected.parentElement.innerText);
     }
     console.log(target)
     console.log(todoArr)
-  
+
     // todoArr.forEach(todo => {
     //     const optionBox = document.querySelector(".option-dots").dataset.dotId;
     //     const box = document.querySelector(`[data-dot-id]`)
@@ -81,12 +88,25 @@ todoListUl[allIndex].addEventListener("click", e => {
     //     } else return "mantap"
     //     console.log(todo)
     // })
-   
+
     // // console.log(target)
     // // console.log(parent)
     // // console.log(selected)
 });
 
+
+// *ALL FUNCTION
+
+// *PHONES
+function phonesAdd(){
+    if(addNewPhoneContainer.dataset.showed == "true"){
+        addNewPhoneContainer.dataset.showed = "false";
+        addNewPhoneContainer.style.display = "none";  
+    } else {
+        addNewPhoneContainer.style.display = "block";
+        addNewPhoneContainer.dataset.showed = "true";
+    }
+}
 
 function generateNumber(todoName) {
     let random = Math.random(11);
@@ -238,7 +258,7 @@ function checkMark(e) {
     }
 }
 
-function clearTodo(todo){
+function clearTodo(todo) {
     if (localStorage.getItem(LOCAL_STORAGE_KEY) === null) {
         todos = []
     } else {
@@ -249,18 +269,7 @@ function clearTodo(todo){
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
 }
 
-// function dotsOption(e) {
-//     const optionBox = document.querySelector(".option-dots")
-//     if(e.)
-// }
 
-
-
-
-// TODO : create option box on dots when clicked
-// TODO : Font
-// TODO : phone optimization
-// TODO : Drag and drop
 
 
 // !NOT WORKING, FIX IT LATER WHEN YOU BECOME WAY MORE SMARTTT 
@@ -280,9 +289,3 @@ function clearTodo(todo){
 //     })
 // }
 
-// const dotsButton = document.querySelectorAll(".dots")
-// const optionBox = document.querySelectorAll(".option-dots")
-
-// dotsButton.forEach(e => {
-//     e.addEventListener("click", dotsOption);
-// })

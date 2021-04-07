@@ -294,8 +294,26 @@ nav {
     font-weight: 400;
     color: #c0c0c0;
   }
-  .inputbar-container {
+  .add-new-phone {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(24, 24, 24, 0.712);
     display: none;
+  }
+  .inputbar-container {
+    position: absolute;
+    top: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .selection {
     width: 100%;
@@ -382,6 +400,9 @@ nav {
     font-size: 1rem;
     font-weight: 300;
     color: #e184f1;
+  }
+  .phone-footer .add-new-container .add-new {
+    cursor: pointer;
   }
 }
 
