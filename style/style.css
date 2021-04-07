@@ -315,6 +315,9 @@ nav {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .inputbar-container button {
+    display: none;
+  }
   .selection {
     width: 100%;
     height: 5vh;
