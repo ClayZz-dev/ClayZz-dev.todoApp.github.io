@@ -7,7 +7,11 @@ $darkgrey : #3C4042;
 $lightgrey : #c0c0c0;
 $grey : #6e7074;
 $mainFont : 'Poppins', sans-serif;
+$headerFont :'Pacifico', cursive;
 $debug : 1px solid red;
+$mainGradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+$bgGradient: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% );;;
+
 
 // fluid font
 // $minsize, $maxsize, $minvw, $maxvw
@@ -37,23 +41,3 @@ $debug : 1px solid red;
 }
 
 // classes
-.active {
-    border-bottom: 2px solid $mainColor;
-    font-weight: 500;
-    color: rgb(233, 233, 233);
-}
-
-.checked{
-    text-decoration: line-through;
-    opacity: 0.5;
-}
-
-.dragged{
-    transition: all 0.25s;
-    transform: scale(1.02, 1.02);
-}
-
-.clicked{
-    display: block !important;
-}
-

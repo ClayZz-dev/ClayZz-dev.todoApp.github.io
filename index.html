@@ -14,38 +14,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
-    <!-- header nav, contains all, important and done -->
-    <nav class="header-nav">
-        <ul class="filter-cont">
-            <li class="filter active" id="all">All</li>
-            <li class="filter" id="important">Important</li>
-        </ul>
-    </nav>
+<body class="text-base overflow-x-hidden ">
 
     <!-- date and day section -->
-    <div class="header-container">
-        <div class="header">
-            <div id="date">
-                <h1>29</h1>
+    <div class="header-container relatives w-screen h-2/4">
+        <div class="svg">
+            <svg height="100%" width="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,600 C 0,600 0,300 0,300 C 47.16705437627216,325.76642258584684 94.33410875254432,351.5328451716937 147,337 C 199.66589124745568,322.4671548283063 257.8306193660948,267.6350418990721 308,288 C 358.1693806339052,308.3649581009279 400.3434137830764,403.9269872320178 437,406 C 473.6565862169236,408.0730127679822 504.79572550159935,316.6570091728568 549,267 C 593.2042744984007,217.34299082714318 650.4736842105262,209.44497607655506 706,245 C 761.5263157894738,280.55502392344494 815.3095376562954,359.5630865209231 869,377 C 922.6904623437046,394.4369134790769 976.2881651642917,350.30267783975256 1020,300 C 1063.7118348357083,249.69732216024744 1097.5378016865368,193.22620212006666 1149,217 C 1200.4621983134632,240.77379787993334 1269.5606280895609,344.79251367998097 1321,372 C 1372.4393719104391,399.20748632001903 1406.2196859552196,349.6037431600095 1440,300 C 1440,300 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#ffffffff" class="transition-all duration-300 ease-in-out delay-150"></path></svg>
+        </div>
+        <div class="header absolute w-screen h-2/4 flex justify-center items-center">
+            <div class="header-txt">
+                <h1 class="md:text-8xl">TODO</h1>
+            </div>
+            <div id="date" class="block">
                 <span>MAR <span>2021</span></span>
             </div>
             <h4>TODAY</h4>
         </div>
     </div>
+    </div>
 
+    <main>
+    <div class="wrapper w-screen h-screen rounded-t-lg">
     <!-- input bar -->
     <div class="add-new-phone " data-showed="false">
-    <div class="inputbar-container">
-        <input type="text" class="input-bar" placeholder="Add new todo">
-        <button class="add-btn">Add</button>
-    </div>
+        <div class="inputbar-container">
+            <input type="text" class="input-bar" placeholder="Add new todo">
+            <button class="add-btn">Add</button>
+        </div>
     </div>
     <!-- main section -->
-    <main>
         <div class="todo-container">
             <!-- square box for todo container -->
             <div class="todo-box all-box">
@@ -93,8 +94,9 @@
                 </div>
             </div>
         </div>
+    </div>
     </main>
-    <script src="script/script.js"></script>
+    <!-- <script src="script/script.js"></script> -->
 
     <!-- <template> -->
     <!-- todo list -->
