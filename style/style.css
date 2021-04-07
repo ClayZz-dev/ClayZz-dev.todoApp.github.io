@@ -265,7 +265,7 @@ nav {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    padding: 0 2.5em;
+    padding: 0 2.2em;
   }
   .header-container .header #date {
     display: -webkit-box;
