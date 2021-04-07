@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
   background-color: #141414;
   color: #c0c0c0;
+  min-height: 100%;
 }
 
 nav {
@@ -304,7 +305,7 @@ nav {
   }
   .inputbar-container {
     position: absolute;
-    top: 45%;
+    top: 38%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

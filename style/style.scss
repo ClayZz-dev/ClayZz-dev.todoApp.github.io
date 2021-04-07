@@ -17,6 +17,7 @@ body{
     overflow-x: hidden;
     background-color: $dark;
     color: $lightgrey;
+    min-height: 100%;
 }
 
 
@@ -228,7 +229,7 @@ nav {
     
     .inputbar-container{
         position: absolute;
-        top: 45%;
+        top: 38%;
         display: flex;
         align-items: center;
         justify-content: center;
