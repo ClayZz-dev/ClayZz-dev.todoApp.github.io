@@ -15,6 +15,10 @@
   height: 100vh;
 }
 
+.navbar-phones {
+  display: none;
+}
+
 .main-container {
   border-left: 1px solid #dbdbdb;
   background-color: #edeff1;
@@ -23,6 +27,7 @@
 .header-todo h1 {
   font-family: "Montserrat", sans-serif;
   text-shadow: -5px 5px 2px #595d5f5b;
+  text-transform: uppercase;
 }
 
 .header-todo span {
@@ -55,7 +60,7 @@
   height: 4rem;
   -webkit-box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
           box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   border-left: 3px solid #98acf8;
   background-color: #f3f8fd;
 }
@@ -89,6 +94,20 @@
   .sidebar {
     display: none;
   }
+  .navbar-phones {
+    display: block;
+  }
+  .header-todo {
+    padding-left: 1rem;
+  }
+  .header-todo h1 {
+    text-shadow: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: none;
+  }
+  .header-todo span {
+    font-size: 0.7rem;
+  }
   .todo-list .todo {
     margin-top: 1rem;
   }
@@ -105,8 +124,29 @@
     background-color: white;
     padding: 0;
   }
+  .header-todo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-todo h1 {
+    margin-bottom: 0.25rem;
+  }
   .sidebar {
     display: none;
+  }
+  .todo-list .todo {
+    width: 90%;
   }
   .todo-list .todo .dots {
     display: none;

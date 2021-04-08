@@ -24,24 +24,30 @@
     <!-- date and day section -->
 
 
-    <main class="flex">
+    <main class="md:flex">
         <!-- *SIDE BAR -->
         <div class="sidebar">
             <div class="header-container">
                 <div class="header-txt flex items-baseline">
-                    <h1 class="text-2xl font-bold tracking-wider">TODO</h1>
+                    <h1 class="text-2xl font-extralight italic tracking-wider">(Coming Soon)</h1>
                 </div>
             </div>
+        </div>
+
+        <!-- *NAV BAR ON PHONES -->
+        <div class="navbar-phones w-screen h-12">
+            <div class="menu-toggle font-extralight italic text-center">(Coming Soon)</div>
+            <div class="notification"></div>
         </div>
         <!-- Main container -->
         <div class="main-container w-screen pt-5 md:px-10 md:pt-20">
 
             <!-- header -->
-        <div id="date" class="header-todo flex justify-between items-baseline mb-4">
+        <div id="date" class="header-todo flex justify-between items-baseline md:mb-4">
             <!-- TODAY header -->
-            <h1 class="text-3xl font-medium">TODAY</h1>
+            <h1 class="text-3xl font-semibold  md:font-medium">Today</h1>
             <!-- date -->
-            <span class="font-bold">29 <span class="font-light">MAR 2021</span></span>
+            <span class="tanggal md:font-bold md:text-base">Tuesday, 29 <span class="month font-light">Mar 2021</span></span>
         </div>
 
         <!-- main section -->
@@ -59,6 +65,47 @@
                 <ul class="todo-list flex-row justify-center">
                     <!-- todo list -->
                     <li class="todo">
+                        <button><i class="far fa-square icon"></i></button>
+                        <div class="todo-text">
+                            test
+                        </div>
+                        <button><i class="fas fa-ellipsis-h dots"></i></button>
+                        <div class="option-dots">
+                            <ul class="option-container">
+                                <li id="delete">Delete</li>
+                                <li id="pin">Pin to top</li>
+                                <li id="comment">Add comment</li>
+                            </ul>
+                        </div>
+                    </li> 
+                    <li class="todo">
+                        <button><i class="far fa-square icon"></i></button>
+                        <div class="todo-text">
+                            test
+                        </div>
+                        <button><i class="fas fa-ellipsis-h dots"></i></button>
+                        <div class="option-dots">
+                            <ul class="option-container">
+                                <li id="delete">Delete</li>
+                                <li id="pin">Pin to top</li>
+                                <li id="comment">Add comment</li>
+                            </ul>
+                        </div>
+                    </li> 
+                    <li class="todo">
+                        <button><i class="far fa-square icon"></i></button>
+                        <div class="todo-text">
+                            test
+                        </div>
+                        <button><i class="fas fa-ellipsis-h dots"></i></button>
+                        <div class="option-dots">
+                            <ul class="option-container">
+                                <li id="delete">Delete</li>
+                                <li id="pin">Pin to top</li>
+                                <li id="comment">Add comment</li>
+                            </ul>
+                        </div>
+                    </li>  <li class="todo">
                         <button><i class="far fa-square icon"></i></button>
                         <div class="todo-text">
                             test
