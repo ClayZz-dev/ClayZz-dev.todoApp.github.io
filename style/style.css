@@ -17,7 +17,6 @@
 
 .main-container {
   border-left: 1px solid #dbdbdb;
-  width: 80%;
   background-color: #edeff1;
 }
 
@@ -26,12 +25,16 @@
   text-shadow: -5px 5px 2px #595d5f5b;
 }
 
+.header-todo span {
+  color: #98acf8;
+}
+
 .todo-container {
   background-color: white;
 }
 
 .inputbar-container .input-bar {
-  border: 1px solid #dbdbdb;
+  border: 1px solid #98acf8;
 }
 
 .inputbar-container .add-btn {
@@ -53,6 +56,7 @@
   -webkit-box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
           box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
   margin-bottom: 0.5rem;
+  border-left: 3px solid #98acf8;
 }
 
 .todo-list .todo .todo-text {
@@ -65,12 +69,45 @@
   margin-right: 0.5rem;
 }
 
+.todo-list .todo .icon {
+  color: #98acf8;
+}
+
+.todo-list .todo .dots {
+  color: #98acf8;
+}
+
 .option-dots {
   display: none;
 }
 
 @media screen and (max-width: 780px) {
+  .main-container {
+    padding: 0 2.5rem;
+  }
   .sidebar {
+    display: none;
+  }
+  .todo-list .todo {
+    margin-top: 1rem;
+  }
+  .inputbar-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .inputbar-container {
+    display: none;
+  }
+  .main-container {
+    background-color: white;
+    padding: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .todo-list .todo .dots {
     display: none;
   }
 }

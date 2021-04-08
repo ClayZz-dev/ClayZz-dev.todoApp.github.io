@@ -7,14 +7,16 @@
     font-family: $mainFont;
 }
 
+// side bar section
 .sidebar{
     width: 20%;
     height: 100vh;
 }
 
+
+// big container section,  the background container of the todo
 .main-container{
     border-left: 1px solid $lightgrey;
-    width: 80%;
     background-color: #edeff1;
 }
 
@@ -23,15 +25,20 @@
         font-family: $minimalistFont;
         text-shadow: -5px 5px 2px #595d5f5b;
     }
+    span{
+        color: $mainColor;
+    }
 }
 
+// todo section
+// todo's container
 .todo-container{
     background-color: white;
 }
 
 .inputbar-container{
     .input-bar{
-        border: 1px solid $lightgrey;
+        border: 1px solid $mainColor;
     }
     .add-btn{
         background-color: $mainColor;
@@ -49,6 +56,7 @@
         height: 4rem;
         box-shadow: 0px 2px 15px -5px rgba(153, 153, 153, 0.486);
         margin-bottom: 0.5rem;
+        border-left: 3px solid $mainColor;
 
         .todo-text{
             flex: 1;
@@ -57,6 +65,13 @@
         .icon{
             margin-right: 0.5rem;
         }
+
+        .icon{
+            color: $mainColor;
+        }
+        .dots{
+            color: $mainColor;
+        }
     }
 }
 
@@ -64,8 +79,44 @@
     display: none;
 }
 
+
+// media queries
 @media screen and (max-width: 780px){
+    .main-container{
+        padding: 0 2.5rem;
+    }
     .sidebar{
         display: none;
     }
+
+    .todo-list{
+        .todo{
+            margin-top: 1rem;
+        }
+    }
+
+    .inputbar-container{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .inputbar-container{
+        display: none;
+    }
+    .main-container{
+        background-color: white;
+        padding: 0;
+    }
+    .sidebar{
+        display: none;
+    }
+    .todo-list{
+        .todo{
+            .dots{ 
+                display: none;
+            }
+        }
+    }
+  
 }
