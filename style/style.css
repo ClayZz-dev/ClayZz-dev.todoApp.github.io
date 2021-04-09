@@ -10,6 +10,10 @@
   outline: none !important;
 }
 
+.icons {
+  cursor: pointer;
+}
+
 .sidebar {
   width: 20%;
   height: 100vh;
@@ -71,20 +75,19 @@
           flex: 1;
 }
 
-.todo-list .todo .icon {
+.todo-list .todo .fi-rr-checkbox {
+  font-size: 1rem;
+  color: #98acf8;
   margin-right: 0.5rem;
-}
-
-.todo-list .todo .icon {
-  color: #98acf8;
-}
-
-.todo-list .todo .dots {
-  color: #98acf8;
 }
 
 .option-dots {
   display: none;
+}
+
+.fi-rr-align-justify {
+  background-color: #98acf8;
+  color: black;
 }
 
 @media screen and (max-width: 780px) {
@@ -96,6 +99,12 @@
   }
   .navbar-phones {
     display: block;
+  }
+  .navbar-phones .menu-toggle .fi-rr-align-left {
+    color: #98acf8;
+  }
+  .navbar-phones .notification .fi-rr-bell-ring {
+    color: #98acf8;
   }
   .header-todo {
     padding-left: 1rem;
@@ -113,6 +122,18 @@
   }
   .inputbar-container {
     display: none;
+  }
+  .phone-footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }
+  .phone-footer .add-new-container .add-new-btn span {
+    font-size: 2rem;
+    color: #98acf8;
+  }
+  .phone-footer .footer-option ul li span {
+    color: #98acf8;
   }
 }
 

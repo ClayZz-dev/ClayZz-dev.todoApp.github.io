@@ -7,6 +7,11 @@
     font-family: $mainFont;
 }
 
+// ALL ICONS
+.icons{
+    cursor: pointer;
+}
+
 // side bar section
 .sidebar{
     width: 20%;
@@ -66,17 +71,12 @@
 
         .todo-text{
             flex: 1;
-        }
+        }   
 
-        .icon{
+        .fi-rr-checkbox{
+            font-size: 1rem;
+            color: $mainColor;
             margin-right: 0.5rem;
-        }
-
-        .icon{
-            color: $mainColor;
-        }
-        .dots{
-            color: $mainColor;
         }
     }
 }
@@ -85,8 +85,17 @@
     display: none;
 }
 
+// icon style
+.fi-rr-align-justify{
+    background-color: $mainColor;
+    color: black;
+}
 
-// media queries
+// .phone-footer{
+//     display: none;
+// }
+
+// *MEDIA QUERIES
 @media screen and (max-width: 780px){
     .main-container{
         padding: 0 2.5rem;
@@ -96,7 +105,20 @@
     }
 
     .navbar-phones{
-        display: block;       
+        display: block;    
+        
+        .menu-toggle{
+            .fi-rr-align-left{
+                color: $mainColor;
+            }   
+           
+        }    
+
+        .notification{
+            .fi-rr-bell-ring{
+                color: $mainColor;
+            }
+        }
     }
 
     .header-todo{
@@ -121,6 +143,24 @@
     .inputbar-container{
         display: none;
     }
+
+    // phone footer option
+    .phone-footer{
+        position: sticky;
+        bottom: 0;
+
+        .add-new-container{
+            .add-new-btn span{
+                font-size: 2rem;
+                color: $mainColor;
+            }
+        }
+        .footer-option{
+            ul li span{
+                color: $mainColor;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 680px){
@@ -131,6 +171,10 @@
         background-color: white;
         padding: 0;
     }
+
+    // .navbar-phones{
+        
+    // }
 
     .header-todo{
         display: flex;
