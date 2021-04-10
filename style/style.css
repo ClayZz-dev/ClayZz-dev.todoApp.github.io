@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.icons {
+.icons, .dots {
   cursor: pointer;
 }
 
@@ -63,6 +63,7 @@ html {
 }
 
 .inputbar-container .add-btn {
+  font-size: 0.8rem;
   background-color: #98acf8;
 }
 
@@ -123,9 +124,16 @@ html {
             transform: translateX(-100%);
     display: block;
     width: 80%;
-    height: 100%;
-    z-index: 99;
-    border-right: red;
+    min-height: 100vh;
+    background-color: white;
+    border-right: 2px solid #98acf8;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  .sidebar #close-btn {
+    color: #98acf8;
   }
   .navbar-phones {
     display: block;
@@ -162,6 +170,7 @@ html {
     color: #98acf8;
   }
   #phone-footer .footer-option ul li span {
+    display: none;
     color: #98acf8;
   }
 }
