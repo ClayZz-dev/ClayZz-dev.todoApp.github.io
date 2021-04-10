@@ -10,6 +10,10 @@
   outline: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .icons {
   cursor: pointer;
 }
@@ -17,10 +21,6 @@
 .sidebar {
   width: 20%;
   height: 100vh;
-}
-
-.navbar-phones {
-  display: none;
 }
 
 .main-container {
@@ -44,6 +44,22 @@
 
 .inputbar-container .input-bar {
   border: 1px solid #98acf8;
+}
+
+.inputbar-container .input-bar::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.inputbar-container .input-bar:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.inputbar-container .input-bar::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.inputbar-container .input-bar::placeholder {
+  font-size: 0.8rem;
 }
 
 .inputbar-container .add-btn {
@@ -70,6 +86,12 @@
 }
 
 .todo-list .todo .todo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -90,12 +112,20 @@
   color: black;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .main-container {
     padding: 0 2.5rem;
+    border: none;
   }
   .sidebar {
-    display: none;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: block;
+    width: 80%;
+    height: 100%;
+    z-index: 99;
+    border-right: red;
   }
   .navbar-phones {
     display: block;
@@ -123,16 +153,15 @@
   .inputbar-container {
     display: none;
   }
-  .phone-footer {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+  #phone-footer {
+    position: fixed;
+    bottom: 0.5rem;
   }
-  .phone-footer .add-new-container .add-new-btn span {
+  #phone-footer .add-new-container .add-new-btn span {
     font-size: 2rem;
     color: #98acf8;
   }
-  .phone-footer .footer-option ul li span {
+  #phone-footer .footer-option ul li span {
     color: #98acf8;
   }
 }
@@ -162,9 +191,6 @@
   }
   .header-todo h1 {
     margin-bottom: 0.25rem;
-  }
-  .sidebar {
-    display: none;
   }
   .todo-list .todo {
     width: 90%;

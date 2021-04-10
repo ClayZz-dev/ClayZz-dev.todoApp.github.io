@@ -5,6 +5,11 @@
         outline: none !important;
     }
     font-family: $mainFont;
+    // border: $debug !important;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 // ALL ICONS
@@ -18,10 +23,6 @@
     height: 100vh;
 }
 
-// navbar on phone display none on desktop version
-.navbar-phones{
-    display: none;       
-}
 
 // big container section,  the background container of the todo
 .main-container{
@@ -49,6 +50,10 @@
 .inputbar-container{
     .input-bar{
         border: 1px solid $mainColor;
+
+        &::placeholder{
+            font-size: 0.8rem;
+        }
     }
     .add-btn{
         background-color: $mainColor;
@@ -70,6 +75,8 @@
         background-color: #f3f8fd;
 
         .todo-text{
+            display: flex;
+            align-items: baseline;
             flex: 1;
         }   
 
@@ -91,23 +98,29 @@
     color: black;
 }
 
-// .phone-footer{
-//     display: none;
-// }
 
 // *MEDIA QUERIES
-@media screen and (max-width: 780px){
+
+// *TABLETS AND BELOW
+@media screen and (max-width: 768px){
     .main-container{
         padding: 0 2.5rem;
+        border: none;
     }
     .sidebar{
-        display: none;
+        position: absolute;
+        transform: translateX(-100%);
+        display: block;
+        width: 80%;
+        height: 100%;
+        z-index: 99;
+        border-right: red;
     }
 
     .navbar-phones{
         display: block;    
-        
         .menu-toggle{
+
             .fi-rr-align-left{
                 color: $mainColor;
             }   
@@ -145,9 +158,9 @@
     }
 
     // phone footer option
-    .phone-footer{
-        position: sticky;
-        bottom: 0;
+    #phone-footer{
+        position: fixed;
+        bottom: 0.5rem;
 
         .add-new-container{
             .add-new-btn span{
@@ -157,6 +170,7 @@
         }
         .footer-option{
             ul li span{
+                // display: none;
                 color: $mainColor;
             }
         }
@@ -186,9 +200,6 @@
         }
     }
 
-    .sidebar{
-        display: none;
-    }
     .todo-list{
         .todo{
             width: 90%;
