@@ -1,5 +1,7 @@
 .checked {
   text-decoration: line-through;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
 }
 
 * {
@@ -102,10 +104,6 @@ html {
   font-size: 1rem;
   color: #98acf8;
   margin-right: 0.5rem;
-}
-
-.option-dots {
-  display: none;
 }
 
 .fi-rr-align-justify {

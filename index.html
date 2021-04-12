@@ -27,7 +27,7 @@
                 <div class="header-txt flex justify-between items-baseline">
                     <h1 class="text-2xl font-extralight italic tracking-wider">(Coming Soon)</h1>
                     <!-- close button -->
-                    <i class="fi-rr-cross-small text-2xl pt-4 pr-4" id="close-btn"></i>
+                    <i class="fi-rr-cross-small text-2xl pt-4 pr-4 icons" id="close-btn"></i>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
 
             <!-- main section -->
             <div class="todo-container shadow-lg min-h-screen py-4 px-4 md:px-12 md:pt-14">
-                <!-- input bar -->
+                <!-- * input bar -->
                 <div class="add-new-phone " data-showed="false">
                     <!-- phone pseudo element-->
                     <div class="inputbar-container text-base mb-4 text-right pr-12">
@@ -67,63 +67,7 @@
                 <div class="todo-box all-box w-full">
                     <!-- top header todo -->
                     <ul class="todo-list flex-row justify-center">
-                        <!-- todo list -->
-                        <li class="todo">
-                            <button><i class="fi-rr-checkbox icons"></i></button>
-                            <div class="todo-text">
-                                test
-                            </div>
-                            <button><i class="fi-rr-menu-dots dots"></i></button>
-                            <div class="option-dots">
-                                <ul class="option-container">
-                                    <li id="delete">Delete</li>
-                                    <li id="pin">Pin to top</li>
-                                    <li id="comment">Add comment</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="todo">
-                            <button><i class="fi-rr-checkbox icons"></i></button>
-                            <div class="todo-text">
-                                test
-                            </div>
-                            <button><i class="fi-rr-menu-dots dots"></i></button>
-                            <div class="option-dots">
-                                <ul class="option-container">
-                                    <li id="delete">Delete</li>
-                                    <li id="pin">Pin to top</li>
-                                    <li id="comment">Add comment</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="todo">
-                            <button><i class="fi-rr-checkbox icons"></i></button>
-                            <div class="todo-text">
-                                test
-                            </div>
-                            <button><i class="fi-rr-menu-dots dots"></i></button>
-                            <div class="option-dots">
-                                <ul class="option-container">
-                                    <li id="delete">Delete</li>
-                                    <li id="pin">Pin to top</li>
-                                    <li id="comment">Add comment</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="todo">
-                            <button><i class="fi-rr-checkbox icons"></i></button>
-                            <div class="todo-text">
-                                test
-                            </div>
-                            <button><i class="fi-rr-menu-dots dots"></i></button>
-                            <div class="option-dots">
-                                <ul class="option-container">
-                                    <li id="delete">Delete</li>
-                                    <li id="pin">Pin to top</li>
-                                    <li id="comment">Add comment</li>
-                                </ul>
-                            </div>
-                        </li>
+                        <!-- template generated will be here -->
                     </ul>
                 </div>
             </div>
@@ -143,22 +87,23 @@
             </div>
         </div>
     </main>
-    <script src="script/script.js"></script>
 
-    <!-- <template> -->
-    <!-- todo list -->
-    <!-- <li id="todo">
-            <button><i class="far fa-square icon"></i></button>
+    <template id="newTodo">
+        <li class="todo">
+            <button><i class="fi-rr-checkbox icons checkmark"></i></button>
             <div class="todo-text"></div>
-            <button><i class="fas fa-ellipsis-h dots"></i></button>
+            <button><i class="fi-rr-menu-dots dots"></i></button>
             <div class="option-dots">
                 <ul class="option-container">
-                    <li id="delete"></li>
+                    <li id="delete">Delete</li>
+                    <li id="pin">Pin to top</li>
+                    <li id="comment">Add comment</li>
                 </ul>
             </div>
-        </li> -->
-    <!-- <template> -->
+        </li>
+    </template>
 
+    <script src="script/script.js"></script>
 </body>
 
 </html>
