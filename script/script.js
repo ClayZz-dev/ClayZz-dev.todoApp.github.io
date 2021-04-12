@@ -57,7 +57,7 @@ close.addEventListener("click", () => {
 // showing todolist if there's todo in localstorage
 window.addEventListener("DOMContentLoaded", showingLocalStorageTodo);
 todoListUl.addEventListener("click", checkMark);
-todoListUl.addEventListener("click", optionDots);
+// todoListUl.addEventListener("click", optionDots);
 
 // todoListUl.addEventListener("click", e => {
 //     const target = e.target;
@@ -169,20 +169,20 @@ function checkMark(e) {
 }
 
 
-function optionDots(e) {
-    const todoTemplate = document.querySelector("#newTodo").content;
-    const newTodoList = document.importNode(todoTemplate, true);
-    const optionContainer = newTodoList.querySelector(".option-dots");
-    const target = e.target;
+// function optionDots(e) {
+//     const todoTemplate = document.querySelector("#newTodo").content;
+//     const newTodoList = document.importNode(todoTemplate, true);
+//     const optionContainer = newTodoList.querySelector(".option-dots");
+//     const target = e.target;
 
-    if (target.classList.contains("dots")) {
-        optionContainer.sytle.display = "";
-        console.log(target)
-        console.log(optionContainer)
-    } else {
-        return;
-    }
-}
+//     if (target.classList.contains("dots")) {
+//         optionContainer.sytle.display = "";
+//         console.log(target)
+//         console.log(optionContainer)
+//     } else {
+//         return;
+//     }
+// }
 // clearing todo from llocalstorage and array
 function clearTodo(todo) {
     if (localStorage.getItem(LOCAL_STORAGE_KEY) === null) {

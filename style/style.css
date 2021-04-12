@@ -106,6 +106,10 @@ html {
   margin-right: 0.5rem;
 }
 
+.option-dots {
+  display: none;
+}
+
 .fi-rr-align-justify {
   background-color: #98acf8;
   color: black;
